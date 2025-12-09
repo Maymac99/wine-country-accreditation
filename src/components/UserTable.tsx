@@ -59,10 +59,9 @@ const UserTable = ({ users, searchQuery, onAccredit }: UserTableProps) => {
       );
     }
 
-    // Sort
     result.sort((a, b) => {
-      const aValue = a[sortField]?.toLowerCase() || "";
-      const bValue = b[sortField]?.toLowerCase() || "";
+      const aValue = String(a[sortField] || "").toLowerCase();
+      const bValue = String(b[sortField] || "").toLowerCase();
       
       if (sortDirection === "asc") {
         return aValue.localeCompare(bValue);
