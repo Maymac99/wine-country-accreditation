@@ -14,9 +14,9 @@ import { ChevronUp, ChevronDown, UserCheck, CheckCircle2 } from "lucide-react";
 interface User {
   "Full Name": string;
   "Email Address": string;
-  "Your Upline Director": string;
-  "Your Upline World Team": string;
-  "Your Status": string;
+  "Upline Director": string;
+  "Upline Worldteam": string;
+  "Status": string;
   Accredit: string;
   rowNumber: number;
 }
@@ -27,7 +27,7 @@ interface UserTableProps {
   onAccredit: (user: User) => void;
 }
 
-type SortField = "Full Name" | "Email Address" | "Your Upline Director" | "Your Upline World Team" | "Your Status";
+type SortField = "Full Name" | "Email Address" | "Upline Director" | "Upline Worldteam" | "Status";
 type SortDirection = "asc" | "desc";
 
 const UserTable = ({ users, searchQuery, onAccredit }: UserTableProps) => {
@@ -53,9 +53,9 @@ const UserTable = ({ users, searchQuery, onAccredit }: UserTableProps) => {
         (user) =>
           user["Full Name"]?.toLowerCase().includes(query) ||
           user["Email Address"]?.toLowerCase().includes(query) ||
-          user["Your Upline Director"]?.toLowerCase().includes(query) ||
-          user["Your Upline World Team"]?.toLowerCase().includes(query) ||
-          user["Your Status"]?.toLowerCase().includes(query)
+          user["Upline Director"]?.toLowerCase().includes(query) ||
+          user["Upline Worldteam"]?.toLowerCase().includes(query) ||
+          user["Status"]?.toLowerCase().includes(query)
       );
     }
 
@@ -109,22 +109,22 @@ const UserTable = ({ users, searchQuery, onAccredit }: UserTableProps) => {
                 Email Address <SortIcon field="Email Address" />
               </TableHead>
               <TableHead 
-                onClick={() => handleSort("Your Upline Director")}
+                onClick={() => handleSort("Upline Director")}
                 className="hidden cursor-pointer font-semibold text-foreground transition-colors hover:text-accent md:table-cell"
               >
-                Upline Director <SortIcon field="Your Upline Director" />
+                Upline Director <SortIcon field="Upline Director" />
               </TableHead>
               <TableHead 
-                onClick={() => handleSort("Your Upline World Team")}
+                onClick={() => handleSort("Upline Worldteam")}
                 className="hidden cursor-pointer font-semibold text-foreground transition-colors hover:text-accent lg:table-cell"
               >
-                Upline World Team <SortIcon field="Your Upline World Team" />
+                Upline Worldteam <SortIcon field="Upline Worldteam" />
               </TableHead>
               <TableHead 
-                onClick={() => handleSort("Your Status")}
+                onClick={() => handleSort("Status")}
                 className="cursor-pointer font-semibold text-foreground transition-colors hover:text-accent"
               >
-                Status <SortIcon field="Your Status" />
+                Status <SortIcon field="Status" />
               </TableHead>
               <TableHead className="text-right font-semibold text-foreground">
                 Action
@@ -152,14 +152,14 @@ const UserTable = ({ users, searchQuery, onAccredit }: UserTableProps) => {
                     {user["Email Address"]}
                   </TableCell>
                   <TableCell className="hidden text-muted-foreground md:table-cell">
-                    {user["Your Upline Director"]}
+                    {user["Upline Director"]}
                   </TableCell>
                   <TableCell className="hidden text-muted-foreground lg:table-cell">
-                    {user["Your Upline World Team"]}
+                    {user["Upline Worldteam"]}
                   </TableCell>
                   <TableCell>
-                    <Badge variant={getStatusVariant(user["Your Status"])}>
-                      {user["Your Status"]}
+                    <Badge variant={getStatusVariant(user["Status"])}>
+                      {user["Status"]}
                     </Badge>
                   </TableCell>
                   <TableCell className="text-right">

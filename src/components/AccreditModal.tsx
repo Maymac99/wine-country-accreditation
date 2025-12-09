@@ -12,9 +12,9 @@ import { UserCheck, X } from "lucide-react";
 interface User {
   "Full Name": string;
   "Email Address": string;
-  "Your Upline Director": string;
-  "Your Upline World Team": string;
-  "Your Status": string;
+  "Upline Director": string;
+  "Upline Worldteam": string;
+  "Status": string;
   Accredit: string;
   rowNumber: number;
 }
@@ -54,7 +54,7 @@ const AccreditModal = ({ isOpen, onClose, onConfirm, user, isLoading }: Accredit
             </div>
             <div className="flex justify-between">
               <span className="text-muted-foreground">Status:</span>
-              <span className="font-medium text-accent">{user["Your Status"]}</span>
+              <span className="font-medium text-accent">{user["Status"]}</span>
             </div>
           </div>
         </div>
