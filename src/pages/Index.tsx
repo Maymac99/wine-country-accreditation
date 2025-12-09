@@ -17,7 +17,7 @@ interface User {
   rowNumber: number;
 }
 
-const API_URL = "https://script.google.com/macros/s/AKfycbx_dR_L9U-j5hRaCuq664go-Do-fJLy-oz2ijjWfYmGFKwVYUufChcw2KZ0Hy4SHVSC/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbwXd9rVj3CnC636RQkwBAb8-_4blQg0AMaDlc9g-Z6Z-Wdw9alZPma8Ua_9rSd-OGiVIA/exec";
 
 const Index = () => {
   const [users, setUsers] = useState<User[]>([]);
