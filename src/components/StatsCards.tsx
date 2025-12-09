@@ -3,9 +3,9 @@ import { Users, UserCheck, Clock, Award } from "lucide-react";
 interface User {
   "Full Name": string;
   "Email Address": string;
-  "Your Upline Director": string;
-  "Your Upline World Team": string;
-  "Your Status": string;
+  "Upline Director": string;
+  "Upline Worldteam": string;
+  "Status": string;
   Accredit: string;
   rowNumber: number;
 }
